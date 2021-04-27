@@ -1,0 +1,30 @@
+.form__labelText{
+    display: inline-block;
+    width: 100%;
+    max-width: 150px;
+    margin-right: 15px;
+}
+
+.form__inputPLN{
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form__button{
+    width: 100%;
+    border: none;
+    background-color: hsl(350, 66%, 58%);
+    color: white;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.form__button:hover{
+    cursor: pointer;
+    background-color: hsl(350, 66%, 63%);
+}
+.form__button:active{
+    background-color: hsl(350, 66%, 68%);
+}

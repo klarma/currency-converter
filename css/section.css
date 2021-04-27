@@ -1,0 +1,19 @@
+.section{
+    margin-top: 20px;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 8px hsl(350, 66%, 63%);
+}
+
+.section__header{
+    padding: 5px 0 20px;
+}
+
+.section__paragrapf{
+    text-align: left;
+}
+
+.section__strong{
+    padding-left: 100px;
+    font-size: 20px;
+}
