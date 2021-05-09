@@ -2,6 +2,7 @@
     const strongEURElement = document.querySelector(".js-section__EUR");
     const strongUSDElement = document.querySelector(".js-section__USD");
     const strongGBPElement = document.querySelector(".js-section__GBP");
+    const amountElement = document.querySelector(".js-form__inputPLN");
 
     const welcome = () => {
         console.log("Hello world created by Krzysiu. Nice to be here");
@@ -13,8 +14,7 @@
         strongGBPElement.innerText = `${gbpRate.toFixed(2)} £`;
     }
 
-    const onSubmitCalculation = e => {
-        const amountElement = document.querySelector(".js-form__inputPLN");
+    const onSubmitCalculation = e => {   
         e.preventDefault();
         const pln = +amountElement.value;
         const eurRate = pln / 4.57;
@@ -27,6 +27,7 @@
         strongEURElement.innerText = "";
         strongUSDElement.innerText = "";
         strongGBPElement.innerText = "";
+        amountElement.focus();
     }
 
     const init = () => {
