@@ -33,21 +33,29 @@
             <form class="form js-form" action="https://postman-echo.com/get">
                 <p>
                     <label><span class="form__labelText">Podaj kwotę w PLN*</span>
-                        <input class="form__inputPLN js-form__inputPLN" name="PLN" type="number" step="any" autofocus
+                        <input class="form__field js-form__inputPLN" name="PLN" type="number" step="any" autofocus
                             required>
+                    </label>
+                </p>
+                <p>
+                    <label><span class="form__labelText">Wybierz walutę</span>
+                        <select class="form__field js-form__select" name="currency">
+                            <option value="EUR">Euro</option>
+                            <option value="USD">Dolar amerykański</option>
+                            <option value="GBP">Funt brytyjski</option>
+                        </select>
                     </label>
                 </p>
                 <p>
                     <button class="form__button">Przelicz</button>
                     <button class="form__button js-form__buttonReset" type="reset">Wyczyść</button>
                 </p>
+
             </form>
         </section>
-        <section class="section">
-            <h2 class="section__header">Przeliczam na:</h2>
-            <p class="section__paragrapf">EUR: <strong class="section__strong js-section__EUR"></strong></p>
-            <p class="section__paragrapf">USD: <strong class="section__strong js-section__USD"></strong></p>
-            <p class="section__paragrapf">GBP: <strong class="section__strong js-section__GBP"></strong></p>
+        <section class="section section--height">
+            <h2 class="section__header">Wynik:</h2>
+            <p class="section__paragraph js-section__paragraph"></p>
         </section>
     </main>
     <footer class="footer">

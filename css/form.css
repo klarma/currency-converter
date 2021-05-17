@@ -1,18 +1,20 @@
-.form__labelText{
+.form__labelText {
     display: inline-block;
     width: 100%;
+    text-align: left;
     max-width: 150px;
     margin-right: 15px;
+    padding-bottom: 5px;
 }
 
-.form__inputPLN{
+.form__field {
     border: 1px solid #ccc;
     padding: 10px;
     width: 100%;
     max-width: 400px;
 }
 
-.form__button{
+.form__button {
     width: 100%;
     border: none;
     background-color: hsl(350, 66%, 58%);
@@ -21,10 +23,11 @@
     padding: 10px;
 }
 
-.form__button:hover{
+.form__button:hover {
     cursor: pointer;
     background-color: hsl(350, 66%, 63%);
 }
-.form__button:active{
+
+.form__button:active {
     background-color: hsl(350, 66%, 68%);
 }
