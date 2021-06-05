@@ -10,12 +10,7 @@
         resultElement.innerHTML = `${pln} zł to <strong>${result.toFixed(2)} ${currency}</strong>`;
     };
 
-    const onSubmitCalculation = e => {
-        e.preventDefault();
-
-        const pln = +amountElement.value;
-        const currency = document.querySelector(".js-form__select").value;
-
+    const calculateResult = (currency, pln) => {
         let result;
 
         switch (currency) {
@@ -30,21 +25,29 @@
         showResults(pln, result, currency);
     };
 
+    const onFormSubmit = e => {
+        e.preventDefault();
+
+        const pln = +amountElement.value;
+        const currency = document.querySelector(".js-form__select").value;
+
+        calculateResult(currency, pln);
+    };
+
     const resetForm = () => {
         resultElement.innerText = "";
         amountElement.focus();
-    }
+    };
 
     const init = () => {
         const formElement = document.querySelector(".js-form");
         const buttonReset = document.querySelector(".js-form__buttonReset");
 
-        formElement.addEventListener("submit", onSubmitCalculation);
+        formElement.addEventListener("submit", onFormSubmit);
         buttonReset.addEventListener("click", resetForm);
 
         welcome();
-    }
+    };
 
     init();
-
 }
