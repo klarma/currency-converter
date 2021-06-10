@@ -6,23 +6,19 @@
         console.log("Hello world created by Krzysiu. Nice to be here");
     };
 
-    const showResults = (pln, result, currency) => {
+    const showResults = (pln, currency, result) => {
         resultElement.innerHTML = `${pln} zł to <strong>${result.toFixed(2)} ${currency}</strong>`;
     };
 
     const calculateResult = (currency, pln) => {
-        let result;
-
         switch (currency) {
             case "EUR":
-                result = pln / 4.57;
+                return pln / 4.57;
             case "USD":
-                result = pln / 3.82;
+                return pln / 3.82;
             case "GBP":
-                result = pln / 5.26;
+                return pln / 5.26;
         };
-
-        showResults(pln, result, currency);
     };
 
     const onFormSubmit = e => {
@@ -30,8 +26,9 @@
 
         const pln = +amountElement.value;
         const currency = document.querySelector(".js-form__select").value;
+        const result = calculateResult(currency, pln);
 
-        calculateResult(currency, pln);
+        showResults(pln, currency, result);
     };
 
     const resetForm = () => {
